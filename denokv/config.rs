@@ -28,7 +28,7 @@ pub struct ServeOptions {
   pub access_token: String,
 
   /// The address to bind the Deno KV HTTP endpoint to.
-  #[clap(long = "addr", default_value = "0.0.0.0:4512")]
+  #[clap(long = "addr", default_value = "0.0.0.0:4512", env = "DENO_KV_LISTEN_ADDR")]
   pub addr: SocketAddr,
 
   /// Open in read-only mode.
